@@ -30,8 +30,9 @@
       tick: function() {
         if (!this.ready) return;
         var position = this.el.object3D.position.y;
-        if (position <= 4) {
+        if (position <= 1) {
           this.direction = 1;
+          this.setAttribute("color", "red")
         } else if (position >= 5) {
           this.direction = -1;
         }
