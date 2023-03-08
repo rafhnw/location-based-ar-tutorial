@@ -30,9 +30,9 @@
       tick: function() {
         if (!this.ready) return;
         var position = this.el.object3D.position.y;
-        if (position <= 1) {
+        if (position <= 4) {
           this.direction = 1;
-        } else if (position >= 2) {
+        } else if (position >= 5) {
           this.direction = -1;
         }
         this.el.object3D.position.set(this.position.x, position + 0.05 * this.direction, this.position.z);
