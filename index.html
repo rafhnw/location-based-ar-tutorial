@@ -31,6 +31,7 @@
           console.log(this.el)
         } else if (position >= 5) {
           this.direction = -1;
+          this.el.setAttribute('visible', true);
         }
         this.el.object3D.position.set(this.position.x, position + 0.05 * this.direction, this.position.z);
       }
