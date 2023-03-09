@@ -11,11 +11,6 @@
 
   <script>
 
-    AFRAME.registerComponent("changeColor", {
-      init: function () {
-        this.setAttribute("color", "red")
-      }
-    })
 
     AFRAME.registerComponent("bounce", {
       init: function() {
@@ -32,7 +27,8 @@
         var position = this.el.object3D.position.y;
         if (position <= 1) {
           this.direction = 1;
-          this.setAttribute("color", "red")
+          this.el.setAttribute('visible', false);
+          console.log(this.el)
         } else if (position >= 5) {
           this.direction = -1;
         }
